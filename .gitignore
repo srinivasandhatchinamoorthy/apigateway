@@ -1,0 +1,12 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.crash.log
+terraform.tfvars
+terraform.tfvars.json
+.terraform.lock.hcl
+
+# Lambda zip files (optional but recommended)
+*.zip
+
