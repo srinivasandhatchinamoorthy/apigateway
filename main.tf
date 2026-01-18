@@ -66,8 +66,8 @@ resource "aws_api_gateway_resource" "secure" {
 resource "aws_api_gateway_authorizer" "auth" {
   name            = "lambda-authorizer"
   rest_api_id     = aws_api_gateway_rest_api.api.id
-  type            = "TOKEN"
-  identity_source = "method.request.header.Authorization"
+  type            = "REQUEST"
+  identity_source = "method.request.header.X-Auth-Token"
   authorizer_uri  = "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/${aws_lambda_function.authorizer.arn}/invocations"
 }
 

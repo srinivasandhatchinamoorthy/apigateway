@@ -1,5 +1,5 @@
 output "invoke_url" {
-  value = "${aws_api_gateway_deployment.deploy.invoke_url}prod/secure"
+  value = "https://${aws_api_gateway_rest_api.api.id}.execute-api.ap-south-1.amazonaws.com/${aws_api_gateway_stage.prod.stage_name}/secure"
 }
 
 
